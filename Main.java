@@ -1,3 +1,11 @@
+import java.util.Map;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
+import java.io.File;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -19,7 +27,7 @@ public class Main {
         for (Map.Entry<CartItem, Integer> entry : shoppingCart.getItems().entrySet()) {
             CartItem item = entry.getKey();
             int quantity = entry.getValue();
-            System.out.println("" + item.getProductName() + "\t\t" + quantity() + "\t\t" + item.getPrice()() + "\t\t" + (item.getPrice() * quantity));
+            System.out.println("" + item.getProductName() + "\t\t" + quantity + "\t\t" + item.getPrice() + "\t\t" + (item.getPrice() * quantity));
         }
 
         System.out.println("--------------------------------------------------------------------------------");
